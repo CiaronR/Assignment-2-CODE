@@ -19,11 +19,14 @@ namespace Assignment_2_CODE
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Here I need to specify the different values as a double
             double R1, R2, R3, R4, R5, TotalSeriesResistance, TotalParallelResistance;
+            // The number typed into the text box is converted to a double and assigned a name
             try
             {
                 R1 = Convert.ToDouble(textBox1.Text);
             }
+            // If what has been inputted in the box is an unrecognised value or nothing it will be converted to zero
             catch
             {
                 R1 = 0;
@@ -60,9 +63,11 @@ namespace Assignment_2_CODE
             {
                 R5 = 0;
             }
+            // The values are added together and given a name as a whole
             TotalSeriesResistance = R1 + R2 + R3 + R4 + R5;
+            // The new value is displayed as a label 
             label6.Text = "Total Series Resistance = " + TotalSeriesResistance;
-
+            // If what has been inputted into the box is unrecognised or nothing it will be converted to infinity
             if (R1 == 0)
             {
                 R1 = Double.PositiveInfinity;
